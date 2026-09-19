@@ -1,0 +1,312 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 0;
+  align-items: center;
+}
+
+.nav__ul {
+  display: flex;
+  gap: 50px;
+}
+
+.nav_icons {
+  display: flex;
+  gap: 24px;
+}
+
+.title {
+  color: aqua;
+}
+
+body {
+  background-color: black;
+}
+
+.card4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+body {
+  min-height: 100vh;
+  background: #030006;
+  color: white;
+  font-family: monospace;
+}
+
+/* HACKER FON */
+.hacker-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    linear-gradient(
+      rgba(120, 0, 255, 0.12) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(120, 0, 255, 0.12) 1px,
+      transparent 1px
+    );
+
+  background-size: 45px 45px;
+
+  box-shadow:
+    inset 0 0 150px #000,
+    inset 0 0 80px rgba(100, 0, 255, 0.4);
+}
+
+.hacker-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.hacker-bg span {
+  position: absolute;
+  color: #8b00ff;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-shadow: 0 0 10px #8b00ff;
+
+  animation: fall linear infinite;
+}
+
+/* Har bir raqam boshqa joydan chiqadi */
+.hacker-bg span:nth-child(1)  { left: 5%;  animation-duration: 6s; }
+.hacker-bg span:nth-child(2)  { left: 13%; animation-duration: 8s; }
+.hacker-bg span:nth-child(3)  { left: 22%; animation-duration: 7s; }
+.hacker-bg span:nth-child(4)  { left: 31%; animation-duration: 9s; }
+.hacker-bg span:nth-child(5)  { left: 40%; animation-duration: 6s; }
+.hacker-bg span:nth-child(6)  { left: 50%; animation-duration: 8s; }
+.hacker-bg span:nth-child(7)  { left: 59%; animation-duration: 7s; }
+.hacker-bg span:nth-child(8)  { left: 68%; animation-duration: 9s; }
+.hacker-bg span:nth-child(9)  { left: 77%; animation-duration: 6s; }
+.hacker-bg span:nth-child(10) { left: 85%; animation-duration: 8s; }
+.hacker-bg span:nth-child(11) { left: 92%; animation-duration: 7s; }
+.hacker-bg span:nth-child(12) { left: 96%; animation-duration: 10s; }
+
+@keyframes fall {
+  from {
+    top: -50px;
+  }
+
+  to {
+    top: 100%;
+  }
+}
+
+/* MARKAZ */
+.content {
+  position: relative;
+  z-index: 2;
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 60px;
+  color: #fff;
+
+  text-shadow:
+    0 0 10px #8b00ff,
+    0 0 30px #8b00ff,
+    0 0 60px #6200ff;
+}
+
+.content p {
+  margin-top: 10px;
+  color: #b56cff;
+  font-size: 20px;
+}
+.title {
+  color: #e28aff;
+  text-shadow:
+    0 0 5px #b026ff,
+    0 0 15px #b026ff,
+    0 0 30px #8a2be2,
+
+
+} 
+.nav__lists a {
+  color: #e8c9ff;
+  transition: 0.3s;
+}
+
+.nav__lists a:hover {
+  color: #d45cff;
+
+  text-shadow:
+    0 0 8px #d45cff,
+    0 0 20px #a020f0;
+
+  transform: translateY(-3px);
+}
+
+.img3 {
+  width: 300px;
+}
+
+.img2 {
+  width: 400px;
+}
+.my-marquee {
+  margin-top: 80px;
+  padding: 18px 0;
+
+  border-top: 1px solid #a020f0;
+  border-bottom: 1px solid #a020f0;
+
+  color: #b026ff;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  text-shadow:
+    0 0 5px aqua,
+    0 0 15px aqua;
+
+  background: rgba(113, 20, 213, 0.03);
+
+  animation: marqueeGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes marqueeGlow {
+  0% {
+    text-shadow: 0 0 5px aqua;
+  }
+
+  100% {
+    text-shadow:
+      0 0 10px aqua,
+      0 0 25px aqua;
+  }
+}
+
+.img5{
+  width:400px;
+  border-radius:50px;
+  }
+
+
+  .card6{
+  width: 500px;
+   background-color: 0 0 5px #b026ff,
+
+  }
+
+  .card5{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+ .img6{
+  width:300px;
+  border-radius: 50px;
+ }
+
+ .portfolio {
+  width: 90%;
+  margin: 50px auto;
+}
+
+.portfolio-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 50px;
+  margin-bottom: 50px;
+
+  border-radius: 30px;
+  background: linear-gradient(90deg, #8a2be2, #d45cff);
+}
+
+.info {
+  width: 40%;
+}
+
+.info h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.info p {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.portfolio-card img {
+  width: 50%;
+  border-radius: 20px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+
+  padding: 15px 25px;
+
+  background: #e28aff;
+  color: white;
+
+  border-radius: 12px;
+
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: #1f032c;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.title {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
