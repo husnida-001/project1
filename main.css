@@ -56,71 +56,256 @@ body {
   color: white;
   font-family: monospace;
 }
-
-/* HACKER FON */
-.hacker-bg {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-
-  background:
-    linear-gradient(
-      rgba(120, 0, 255, 0.12) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(120, 0, 255, 0.12) 1px,
-      transparent 1px
-    );
-
-  background-size: 45px 45px;
-
-  box-shadow:
-    inset 0 0 150px #000,
-    inset 0 0 80px rgba(100, 0, 255, 0.4);
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #080002;
+  overflow-x: hidden;
 }
 
+/* ASOSIY HACKER FON */
 .hacker-bg {
   position: fixed;
   inset: 0;
   z-index: -1;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      #180307 0%,
+      #0d0103 45%,
+      #050001 100%
+    );
+}
+
+/* QIZIL SHOVQIN / YORUG‘LIK */
+.hacker-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at 10% 20%, rgba(255, 0, 30, .25), transparent 25%),
+    radial-gradient(circle at 90% 30%, rgba(255, 0, 30, .2), transparent 25%),
+    radial-gradient(circle at 15% 80%, rgba(180, 0, 20, .2), transparent 25%),
+    radial-gradient(circle at 85% 80%, rgba(255, 0, 30, .18), transparent 25%);
+
   pointer-events: none;
 }
 
-.hacker-bg span {
-  position: absolute;
-  color: #8b00ff;
-  font-size: 18px;
-  font-weight: bold;
-  letter-spacing: 5px;
-  text-shadow: 0 0 10px #8b00ff;
+.hacker-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
 
-  animation: fall linear infinite;
+  background:
+    radial-gradient(
+      circle at center,
+      #180307 0%,
+      #0c0103 50%,
+      #030001 100%
+    );
 }
 
-/* Har bir raqam boshqa joydan chiqadi */
-.hacker-bg span:nth-child(1)  { left: 5%;  animation-duration: 6s; }
-.hacker-bg span:nth-child(2)  { left: 13%; animation-duration: 8s; }
-.hacker-bg span:nth-child(3)  { left: 22%; animation-duration: 7s; }
-.hacker-bg span:nth-child(4)  { left: 31%; animation-duration: 9s; }
-.hacker-bg span:nth-child(5)  { left: 40%; animation-duration: 6s; }
-.hacker-bg span:nth-child(6)  { left: 50%; animation-duration: 8s; }
-.hacker-bg span:nth-child(7)  { left: 59%; animation-duration: 7s; }
-.hacker-bg span:nth-child(8)  { left: 68%; animation-duration: 9s; }
-.hacker-bg span:nth-child(9)  { left: 77%; animation-duration: 6s; }
-.hacker-bg span:nth-child(10) { left: 85%; animation-duration: 8s; }
-.hacker-bg span:nth-child(11) { left: 92%; animation-duration: 7s; }
-.hacker-bg span:nth-child(12) { left: 96%; animation-duration: 10s; }
+/* KO‘P QATORLI CODE */
+.code-rain {
+  position: absolute;
+  top: -500px;
 
-@keyframes fall {
+  color: #ff1635;
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.8;
+  letter-spacing: 5px;
+
+  text-shadow:
+    0 0 5px #ff1635,
+    0 0 12px #ff002f;
+
+  opacity: 0.65;
+
+  animation: codeFall linear infinite;
+}
+
+/* HAR BIRI BOSHQA JOYDAN */
+.rain1 {
+  left: 3%;
+  animation-duration: 7s;
+}
+
+.rain2 {
+  left: 14%;
+  animation-duration: 9s;
+  animation-delay: -3s;
+}
+
+.rain3 {
+  left: 27%;
+  animation-duration: 8s;
+  animation-delay: -5s;
+}
+
+.rain4 {
+  left: 39%;
+  animation-duration: 10s;
+  animation-delay: -2s;
+}
+
+.rain5 {
+  left: 53%;
+  animation-duration: 7s;
+  animation-delay: -6s;
+}
+
+.rain6 {
+  left: 67%;
+  animation-duration: 9s;
+  animation-delay: -4s;
+}
+
+.rain7 {
+  left: 80%;
+  animation-duration: 8s;
+  animation-delay: -7s;
+}
+
+.rain8 {
+  left: 93%;
+  animation-duration: 11s;
+  animation-delay: -1s;
+}
+
+
+/* YUQORIDAN PASTGA */
+@keyframes codeFall {
+
+  0% {
+    transform: translateY(-100px);
+  }
+
+  100% {
+    transform: translateY(120vh);
+  }
+
+}
+/* MEXANIK TISHLI G‘ILDIRAKLAR */
+.gear {
+  position: absolute;
+  color: #b3001b;
+  font-size: 100px;
+  opacity: 0.28;
+
+  text-shadow:
+    0 0 8px #ff1635,
+    0 0 20px #8b0015;
+
+  animation: gearRotate 12s linear infinite;
+}
+
+/* Joylashuvi */
+.gear1 {
+  left: 3%;
+  top: 15%;
+  font-size: 120px;
+}
+
+.gear2 {
+  right: 4%;
+  top: 28%;
+  font-size: 150px;
+  animation-direction: reverse;
+}
+
+.gear3 {
+  left: 18%;
+  bottom: 8%;
+  font-size: 80px;
+  animation-duration: 9s;
+}
+
+.gear4 {
+  right: 18%;
+  bottom: 5%;
+  font-size: 105px;
+  animation-duration: 15s;
+  animation-direction: reverse;
+}
+
+/* Aylanish */
+@keyframes gearRotate {
   from {
-    top: -50px;
+    transform: rotate(0deg);
   }
 
   to {
-    top: 100%;
+    transform: rotate(360deg);
   }
+}
+.cross {
+  position: absolute;
+
+  color: #ff173b;
+  font-size: 30px;
+
+  text-shadow:
+    0 0 8px #ff173b,
+    0 0 20px #ff173b;
+
+  animation: glow 2s infinite alternate;
+}
+
+.c1 {
+  left: 12%;
+  top: 42%;
+}
+
+.c2 {
+  right: 20%;
+  top: 15%;
+}
+
+.c3 {
+  right: 10%;
+  bottom: 25%;
+}
+
+@keyframes glow {
+  from {
+    opacity: .3;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* KAPALAK */
+.butterfly {
+  position: absolute;
+  left: 10%;
+  top: 28%;
+
+  font-size: 45px;
+  filter:
+    drop-shadow(0 0 8px #ff1744)
+    drop-shadow(0 0 15px #ff1744);
+}
+
+/* YURAK */
+.heart {
+  position: absolute;
+  left: 4%;
+  bottom: 8%;
+
+  color: #ff173b;
+  font-size: 70px;
+
+  text-shadow:
+    0 0 10px #ff173b,
+    0 0 25px #ff173b;
 }
 
 /* MARKAZ */
@@ -143,9 +328,9 @@ body {
   color: #fff;
 
   text-shadow:
-    0 0 10px #8b00ff,
-    0 0 30px #8b00ff,
-    0 0 60px #6200ff;
+    0 0 10px #b3001b,
+    0 0 30px #8b0015,
+    0 0 60px #ff1635;
 }
 
 .content p {
@@ -154,29 +339,35 @@ body {
   font-size: 20px;
 }
 .title {
-  color: #e28aff;
+  color: #ffffff;
+  font-weight: bold;
+
   text-shadow:
-    0 0 5px #b026ff,
-    0 0 15px #b026ff,
-    0 0 30px #8a2be2,
+    0 0 5px #ff1635,
+    0 0 15px #ff1635,
+    0 0 30px #ff1635,
+    0 0 50px #8b0015;
+}
 
-
-} 
 .nav__lists a {
-  color: #e8c9ff;
+  color: #ffffff;
+  text-decoration: none;
+
+  text-shadow:
+    0 0 5px #ff1635,
+    0 0 12px #ff1635;
+    
   transition: 0.3s;
 }
 
 .nav__lists a:hover {
-  color: #d45cff;
+  color: #ff6b81;
 
   text-shadow:
-    0 0 8px #d45cff,
-    0 0 20px #a020f0;
-
-  transform: translateY(-3px);
+    0 0 5px #ff1635,
+    0 0 15px #ff1635,
+    0 0 30px #ff1635;
 }
-
 .img3 {
   width: 300px;
 }
@@ -240,6 +431,11 @@ body {
   border-radius: 50px;
  }
 
+ .img7{
+  width:300px;
+  border-radius:40px;
+ }
+
  .portfolio {
   width: 90%;
   margin: 50px auto;
@@ -254,7 +450,7 @@ body {
   margin-bottom: 50px;
 
   border-radius: 30px;
-  background: linear-gradient(90deg, #8a2be2, #d45cff);
+  background: linear-gradient(90deg, #8b0015, #230105);
 }
 
 .info {
@@ -282,7 +478,7 @@ body {
 
   padding: 15px 25px;
 
-  background: #e28aff;
+  background: #45020e;
   color: white;
 
   border-radius: 12px;
@@ -308,5 +504,168 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #050914;
+  font-family: Arial, sans-serif;
+}
+
+/* CAROUSEL */
+
+.carousel {
+  width: 100%;
+  height: 750px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Radio tugmalar ko‘rinmaydi */
+
+.carousel input {
+  display: none;
+}
+
+
+/* KARTALAR */
+
+.card {
+  position: absolute;
+
+  width: 400px;
+  height: 525px;
+
+  background: #230105;
+  border: 1px solid #550507;
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  transform: scale(0.85);
+
+  transition: 0.5s ease;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+
+/* RASM */
+
+.card img {
+  width: 100%;
+  height: 365px;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+/* INFO */
+
+.info {
+  padding: 20px;
+  color: white;
+}
+
+.info h2 {
+  margin: 0 0 5px;
+  font-size: 24px;
+}
+
+.info span {
+  color: #ff173b;
+  font-size: 15px;
+}
+
+.info p {
+  color: #aeb8ca;
+  font-size: 16px;
+  line-height: 1.4;
+  margin-top: 10px;
+}
+
+
+/* OLDINDAGI KARTA */
+
+#slide1:checked ~ .card1,
+#slide2:checked ~ .card2,
+#slide3:checked ~ .card3,
+#slide4:checked ~ .card4,
+#slide5:checked ~ .card5,
+#slide6:checked ~ .card6,
+#slide7:checked ~ .card7,
+#slide8:checked ~ .card8,
+#slide9:checked ~ .card9,
+#slide10:checked ~ .card10,
+#slide11:checked ~ .card11,
+#slide12:checked ~ .card12 {
+  transform: scale(1);
+  z-index: 5;
+}
+
+
+/* ORQADAGI SOYA KARTALAR */
+
+
+
+/* NUQTALAR */
+
+.dots {
+  position: absolute;
+  bottom: 55px;
+
+  display: flex;
+  gap: 12px;
+
+  z-index: 20;
+}
+
+.dots label {
+  width: 16px;
+  height: 16px;
+
+  border-radius: 50%;
+
+  background: #596273;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+/* AKTIV NUQTA */
+
+#slide1:checked ~ .dots label:nth-child(1),
+#slide2:checked ~ .dots label:nth-child(2),
+#slide3:checked ~ .dots label:nth-child(3),
+#slide4:checked ~ .dots label:nth-child(4),
+#slide5:checked ~ .dots label:nth-child(5),
+#slide6:checked ~ .dots label:nth-child(6),
+#slide7:checked ~ .dots label:nth-child(7),
+#slide8:checked ~ .dots label:nth-child(8),
+#slide9:checked ~ .dots label:nth-child(9),
+#slide10:checked ~ .dots label:nth-child(10),
+#slide11:checked ~ .dots label:nth-child(11),
+#slide12:checked ~ .dots label:nth-child(12) {
+  background: white;
+  transform: scale(1.25);
+}
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
 
 

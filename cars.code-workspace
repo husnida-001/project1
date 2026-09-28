@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../cars"
+		},
+		{
+			"path": "../cafee menu"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501
+	}
+}
