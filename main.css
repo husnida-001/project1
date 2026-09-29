@@ -43,11 +43,6 @@ body {
   background-color: black;
 }
 
-.card4 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 
 body {
@@ -70,13 +65,12 @@ body {
   z-index: -1;
   overflow: hidden;
 
-  background:
-    radial-gradient(
-      ellipse at center,
-      #180307 0%,
-      #0d0103 45%,
-      #050001 100%
-    );
+  background: radial-gradient(
+    ellipse at center,
+    #180307 0%,
+    #0d0103 45%,
+    #050001 100%
+  );
 }
 
 /* QIZIL SHOVQIN / YORUG‘LIK */
@@ -86,10 +80,10 @@ body {
   inset: 0;
 
   background:
-    radial-gradient(circle at 10% 20%, rgba(255, 0, 30, .25), transparent 25%),
-    radial-gradient(circle at 90% 30%, rgba(255, 0, 30, .2), transparent 25%),
-    radial-gradient(circle at 15% 80%, rgba(180, 0, 20, .2), transparent 25%),
-    radial-gradient(circle at 85% 80%, rgba(255, 0, 30, .18), transparent 25%);
+    radial-gradient(circle at 10% 20%, rgba(255, 0, 30, 0.25), transparent 25%),
+    radial-gradient(circle at 90% 30%, rgba(255, 0, 30, 0.2), transparent 25%),
+    radial-gradient(circle at 15% 80%, rgba(180, 0, 20, 0.2), transparent 25%),
+    radial-gradient(circle at 85% 80%, rgba(255, 0, 30, 0.18), transparent 25%);
 
   pointer-events: none;
 }
@@ -100,13 +94,12 @@ body {
   z-index: -1;
   overflow: hidden;
 
-  background:
-    radial-gradient(
-      circle at center,
-      #180307 0%,
-      #0c0103 50%,
-      #030001 100%
-    );
+  background: radial-gradient(
+    circle at center,
+    #180307 0%,
+    #0c0103 50%,
+    #030001 100%
+  );
 }
 
 /* KO‘P QATORLI CODE */
@@ -178,10 +171,8 @@ body {
   animation-delay: -1s;
 }
 
-
 /* YUQORIDAN PASTGA */
 @keyframes codeFall {
-
   0% {
     transform: translateY(-100px);
   }
@@ -189,7 +180,6 @@ body {
   100% {
     transform: translateY(120vh);
   }
-
 }
 /* MEXANIK TISHLI G‘ILDIRAKLAR */
 .gear {
@@ -274,7 +264,7 @@ body {
 
 @keyframes glow {
   from {
-    opacity: .3;
+    opacity: 0.3;
   }
 
   to {
@@ -289,9 +279,7 @@ body {
   top: 28%;
 
   font-size: 45px;
-  filter:
-    drop-shadow(0 0 8px #ff1744)
-    drop-shadow(0 0 15px #ff1744);
+  filter: drop-shadow(0 0 8px #ff1744) drop-shadow(0 0 15px #ff1744);
 }
 
 /* YURAK */
@@ -356,7 +344,7 @@ body {
   text-shadow:
     0 0 5px #ff1635,
     0 0 12px #ff1635;
-    
+
   transition: 0.3s;
 }
 
@@ -370,10 +358,12 @@ body {
 }
 .img3 {
   width: 300px;
+  border-radius: 40px;
 }
 
 .img2 {
   width: 400px;
+  border-radius: 40px;
 }
 .my-marquee {
   margin-top: 80px;
@@ -408,35 +398,18 @@ body {
   }
 }
 
-.img5{
-  width:400px;
-  border-radius:50px;
-  }
-
-
-  .card6{
-  width: 500px;
-   background-color: 0 0 5px #b026ff,
-
-  }
-
-  .card5{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
- .img6{
-  width:300px;
+.img5 {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
   border-radius: 50px;
- }
+}
+.cardd {
+  display: flex;
+  justify-content: space-between;
+}
 
- .img7{
-  width:300px;
-  border-radius:40px;
- }
-
- .portfolio {
+.portfolio {
   width: 90%;
   margin: 50px auto;
 }
@@ -514,6 +487,9 @@ body {
   font-family: Arial, sans-serif;
 }
 
+
+
+
 /* CAROUSEL */
 
 .carousel {
@@ -531,7 +507,6 @@ body {
 .carousel input {
   display: none;
 }
-
 
 /* KARTALAR */
 
@@ -554,7 +529,6 @@ body {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
 }
 
-
 /* RASM */
 
 .card img {
@@ -565,7 +539,6 @@ body {
 
   display: block;
 }
-
 
 /* INFO */
 
@@ -591,7 +564,6 @@ body {
   margin-top: 10px;
 }
 
-
 /* OLDINDAGI KARTA */
 
 #slide1:checked ~ .card1,
@@ -610,10 +582,7 @@ body {
   z-index: 5;
 }
 
-
 /* ORQADAGI SOYA KARTALAR */
-
-
 
 /* NUQTALAR */
 
@@ -640,7 +609,6 @@ body {
   transition: 0.3s;
 }
 
-
 /* AKTIV NUQTA */
 
 #slide1:checked ~ .dots label:nth-child(1),
@@ -659,13 +627,136 @@ body {
   transform: scale(1.25);
 }
 
-.footer{
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.img8{
+  border-radius:50% ;
+  width:100px;
+}
+
+.img9{
+  width: 100px;
+  border-radius:50%;
+}
+
+.card4{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 
+.social-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
 
+.social-top,
+.social-bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
 
+.social-instagram,
+.social-twitter,
+.social-github,
+.social-discord {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.2s ease-in-out;
+}
 
+.social-instagram {
+  border-radius: 90px 5px 5px 5px;
+}
+
+.social-twitter {
+  border-radius: 5px 90px 5px 5px;
+}
+
+.social-github {
+  border-radius: 5px 5px 5px 90px;
+}
+
+.social-discord {
+  border-radius: 5px 5px 90px 5px;
+}
+
+.icon-instagram {
+  margin-top: 1.5em;
+  margin-left: 1.2em;
+  fill: #cc39a4;
+}
+
+.icon-twitter {
+  margin-top: 1.5em;
+  margin-left: -0.9em;
+  fill: #03a9f4;
+}
+
+.icon-github {
+  margin-top: -0.6em;
+  margin-left: 1.2em;
+}
+
+.icon-discord {
+  margin-top: -0.9em;
+  margin-left: -1.2em;
+  fill: #8c9eff;
+}
+
+.social-instagram:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #cc39a4;
+}
+
+.social-instagram:hover .icon-instagram {
+  fill: white;
+}
+
+.social-twitter:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #03a9f4;
+}
+
+.social-twitter:hover .icon-twitter {
+  fill: white;
+}
+
+.social-github:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: black;
+}
+
+.social-github:hover .icon-github {
+  fill: white;
+}
+
+.social-discord:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #8c9eff;
+}
+
+.social-discord:hover .icon-discord {
+  fill: white;
+}
