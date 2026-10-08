@@ -760,3 +760,99 @@ body {
 .social-discord:hover .icon-discord {
   fill: white;
 }
+
+.projects-carousel {
+  width: 90%;
+  max-width: 1300px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.projects-track {
+  display: flex;
+  width: 400%;
+  animation: slide 10s infinite;
+}
+
+.project-card {
+  width: 25%;
+  min-height: 330px;
+  padding: 45px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+
+  border-radius: 35px;
+
+  background: linear-gradient(
+    100deg,
+    #430111,
+    #3a0002
+  );
+}
+
+.project-info {
+  width: 40%;
+}
+
+.project-info h2 {
+  color: white;
+  font-size: 42px;
+  margin: 0 0 20px;
+}
+
+.project-info p {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.project-info a {
+  display: inline-block;
+  padding: 15px 25px;
+
+  color: white;
+  background: rgba(80, 20, 40, 0.5);
+
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+.project-card img {
+  width: 55%;
+  height: 250px;
+
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+
+/* CAROUSEL */
+@keyframes slide {
+
+  0%, 22% {
+    transform: translateX(0);
+  }
+
+  27%, 49% {
+    transform: translateX(-25%);
+  }
+
+  54%, 76% {
+    transform: translateX(-50%);
+  }
+
+  81%, 100% {
+    transform: translateX(-75%);
+  }
+}
+
+.family{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
